@@ -1,11 +1,14 @@
 {
-  "name": "repertoire",
+  "name": "@cdssnc/repertoire",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/main.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist/"
+  ],
   "scripts": {
     "test": "jest",
-    "build": "rm -rf ./dist/* && babel src/ -d dist/",
+    "build": "rm -rf ./dist/* && babel src/ -d dist/ --ignore '**/*.test.js'",
     "lint": "eslint 'src/**/*.js'"
   },
   "repository": {

@@ -8,6 +8,7 @@ module.exports = {
   ],
   env: {
     'jest/globals': true,
+    node: true,
   },
   parser: 'babel-eslint',
   plugins: ['jest', 'import', 'react'],
