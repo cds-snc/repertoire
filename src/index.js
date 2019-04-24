@@ -11,3 +11,5 @@ export { OrderedList, Ol } from './ordered-list'
 export { Container, Content, CenterContent } from './container'
 
 export { Breadcrumb } from './breadcrumb'
+
+export { Button } from './button'

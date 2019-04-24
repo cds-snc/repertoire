@@ -1,0 +1,43 @@
+---
+name: Button
+---
+
+import { Playground } from 'docz'
+import { Button } from '../src'
+
+# Button
+
+The Button component is used to create a styled HTML `<button>`.
+
+<Playground>
+  <Button color="white" bg="green" border="2px solid black">
+    I am a button!
+  </Button>
+</Playground>
+
+## styled-system props
+
+Component accepts [space](https://styled-system.com/api#space), [color](https://styled-system.com/api#color), [width](https://styled-system.com/api#width),
+[borders](https://styled-system.com/api#borders), [layout](https://styled-system.com/api#layout), [fontSize](https://styled-system.com/api#fontsize) and [typography](https://styled-system.com/api#typography) props from styled-system.
+
+The [colorStyle](https://styled-system.com/table) prop can be used to define a set of colors that make up a Button. For example:
+
+```
+// theme.js
+
+const theme = {
+  colorStyles: {
+      button: {
+        color: colors.white,
+        backgroundColor: colors.green,
+        '&:focus': {
+            outline: `3px solid ${colors.focusColor}`,
+        },
+    }
+  }
+}
+
+// index.js
+
+<Button colors="button">I am a button</Button>
+```
