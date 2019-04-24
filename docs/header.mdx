@@ -1,0 +1,44 @@
+---
+name: Header
+---
+
+import { Playground } from 'docz'
+import { Header, H1, H2, H3, H4, H5, H6 } from '../src'
+
+# Header
+
+The Header component is used to build styled HTML headings. By default, it renders as an h1, but requires an `as` prop of a valid heading value (h1-h6).
+
+<Playground>
+  <Header as="h1">Basic header component</Header>
+  <Header as="h1" color="white" bg="red">
+    Header component with white font, red background
+  </Header>
+  <Header as="h1" fontSize="16pt" fontWeight="bold">
+    Header component with specific font size, bold
+  </Header>
+</Playground>
+
+## Presets
+
+`<H1 /> - <H6 />` are preset configurations for HTML headings h1-h6.
+
+<Playground>
+  <H1>Header 1</H1>
+  <H2>Header 2</H2>
+  <H3>Header 3</H3>
+  <H4>Header 4</H4>
+  <H5>Header 5</H5>
+  <H6>Header 6</H6>
+</Playground>
+
+## styled-system props
+
+Header component accepts [space](https://styled-system.com/api#space), [color](https://styled-system.com/api#color),
+[fontSize](https://styled-system.com/api#fontsize) and [typography](https://styled-system.com/api#typography) props from styled-system.
+
+## Component props
+
+| Name |       Type       | Default | Description                                                                       |
+| ---- | :--------------: | ------- | :-------------------------------------------------------------------------------- |
+| as   | Enum, _Required_ | `h1`    | Sets the HTML tag for the component. Required to be a valid heading value (h1-h6) |

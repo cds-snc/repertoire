@@ -10,7 +10,7 @@ import {
 import { cleanProps } from '../utils/cleanProps'
 import PropTypes from 'prop-types'
 
-export const Text = styled('span', {
+export const Header = styled('h1', {
   shouldForwardProp: prop => cleanProps(prop),
 })`
   font-family: ${({ theme }) => theme.fontSans};
@@ -23,8 +23,8 @@ export const Text = styled('span', {
   ${textAlign};
 `
 
-Text.propTypes = {
-  as: PropTypes.string,
+Header.propTypes = {
+  as: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']).isRequired,
   ...fontSize.propTypes,
   ...lineHeight.propTypes,
   ...space.propTypes,
@@ -33,8 +33,8 @@ Text.propTypes = {
   ...textAlign.propTypes,
 }
 
-Text.defaultProps = {
-  as: 'span',
+Header.defaultProps = {
+  as: 'h1',
 }
 
-export { P, Lead } from './presets'
+export { H1, H2, H3, H4, H5, H6 } from './presets'
