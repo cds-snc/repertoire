@@ -1,0 +1,37 @@
+---
+name: Container
+---
+
+import { Playground } from 'docz'
+import { Container, Content, CenterContent } from '../src'
+
+# Container
+
+The Container component is used to build the page & component layouts. It renders as a `<div>`.
+
+<Playground>
+  <Container height="200" width="300" border="1px solid black" p={3}>
+    I am in a container!
+  </Container>
+</Playground>
+
+## Presets
+
+`<Content />` is a container preset that is intended to be used as the main content wrapper. `<CenterContent />` is intended to be used within the main content wrapper to center its contents.
+In the examples below we've added some padding and borders to present the components, but the presets can and should be used without!
+
+<Playground>
+  <Content border="1px solid black" p={2}>
+    I am in the content container!
+    <CenterContent maxWidth="300px" border="1px solid black" p={2}>
+      I am in the center content container! (with an arbitrarily small width so
+      you can see how I work)
+    </CenterContent>
+  </Content>
+</Playground>
+
+## styled-system props
+
+Component accepts [space](https://styled-system.com/api#space), [color](https://styled-system.com/api#color), [width](https://styled-system.com/api#width),
+[borders](https://styled-system.com/api#borders), [layout](https://styled-system.com/api#layout), [flexbox](https://styled-system.com/api#flexbox) and
+[position](https://styled-system.com/api#position) props from styled-system.

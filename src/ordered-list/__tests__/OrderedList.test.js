@@ -1,14 +1,14 @@
 import React from 'react'
 import { ThemeProvider } from 'emotion-theming'
-import { UnorderedList, Ul } from '../'
+import { OrderedList, Ol } from '../'
 import { render, cleanup } from 'react-testing-library'
 import { mount } from 'enzyme'
 
-describe('<UnorderedList />', () => {
+describe('<OrderedList />', () => {
   afterEach(cleanup)
 
   it('properly renders child components', () => {
-    const { getAllByText } = render(<UnorderedList>foo</UnorderedList>)
+    const { getAllByText } = render(<OrderedList>foo</OrderedList>)
 
     const test = getAllByText(/foo/)
     expect(test).toHaveLength(1)
@@ -19,14 +19,14 @@ describe('<UnorderedList />', () => {
       <ThemeProvider
         theme={{ fontSizes: ['14px'], lineHeights: ['0', '1.35'] }}
       >
-        <UnorderedList
+        <OrderedList
           fontSize={0}
           fontWeight="400"
           lineHeight={1}
           textAlign="left"
         >
           foo
-        </UnorderedList>
+        </OrderedList>
       </ThemeProvider>,
     )
 
@@ -40,9 +40,9 @@ describe('<UnorderedList />', () => {
   it('uses the color props to set font color and background color in CSS', () => {
     const { getByText } = render(
       <ThemeProvider theme={{ colors: { blue: '#005ea5' } }}>
-        <UnorderedList bg="blue" color="blue">
+        <OrderedList bg="blue" color="blue">
           test
-        </UnorderedList>
+        </OrderedList>
       </ThemeProvider>,
     )
 
@@ -55,9 +55,9 @@ describe('<UnorderedList />', () => {
     const SPACING = ['0px', '5px']
     const { getByText } = render(
       <ThemeProvider theme={{ space: SPACING }}>
-        <UnorderedList m="auto" ml={1} p={0} px={1}>
+        <OrderedList m="auto" ml={1} p={0} px={1}>
           foo
-        </UnorderedList>
+        </OrderedList>
       </ThemeProvider>,
     )
 
@@ -71,7 +71,7 @@ describe('<UnorderedList />', () => {
 
   it('uses the layout props to set width, height, and display related CSS values', () => {
     const { getByText } = render(
-      <UnorderedList
+      <OrderedList
         width="100"
         minWidth="50"
         maxWidth="150"
@@ -81,7 +81,7 @@ describe('<UnorderedList />', () => {
         display="block"
       >
         foo
-      </UnorderedList>,
+      </OrderedList>,
     )
 
     const test = getByText(/foo/)
@@ -94,23 +94,23 @@ describe('<UnorderedList />', () => {
     expect(test).toHaveStyleRule('display', 'block')
   })
 
-  it('uses the listStyleType prop to set list style type in the CSS', () => {
-    const { getByText } = render(<Ul listStyleType="square">foo</Ul>)
+  it('uses the listStyleType prop to set the list style type in css', () => {
+    const { getByText } = render(<Ol listStyleType="roman">foo</Ol>)
 
     const test = getByText(/foo/)
-    expect(test).toHaveStyleRule('list-style-type', 'square')
+    expect(test).toHaveStyleRule('list-style-type', 'roman')
   })
 
   it('sets left padding to 0 and list style type to none when listStyleType=none', () => {
-    const { getByText } = render(<Ul listStyleType="none">foo</Ul>)
+    const { getByText } = render(<Ol listStyleType="none">foo</Ol>)
 
     const test = getByText(/foo/)
     expect(test).toHaveStyleRule('list-style-type', 'none')
     expect(test).toHaveStyleRule('padding-left', '0')
   })
 
-  it('renders as a ul', () => {
-    let wrapper = mount(<UnorderedList />).find('ul')
-    expect(wrapper.is('ul')).toBeTruthy()
+  it('renders as a ol', () => {
+    let wrapper = mount(<OrderedList />).find('ol')
+    expect(wrapper.is('ol')).toBeTruthy()
   })
 })
