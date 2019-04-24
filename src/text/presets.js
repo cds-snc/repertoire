@@ -1,17 +1,18 @@
 import React from 'react'
-import { Paragraph } from '.'
+import { Text } from '.'
 import PropTypes from 'prop-types'
 
 export const P = props => (
-  <Paragraph
+  <Text
     fontSize={[2, null, 3]}
     lineHeight={[2, null, 3]}
     mb={4}
     color="black"
+    as="p"
     {...props}
   >
     {props.children}
-  </Paragraph>
+  </Text>
 )
 
 P.propTypes = {
@@ -19,7 +20,8 @@ P.propTypes = {
 }
 
 export const Lead = props => (
-  <Paragraph
+  <Text
+    as="p"
     fontSize={[3, null, 4]}
     lineHeight={[3, null, 4]}
     mb={4}
@@ -27,7 +29,7 @@ export const Lead = props => (
     {...props}
   >
     {props.children}
-  </Paragraph>
+  </Text>
 )
 
 Lead.propTypes = {
