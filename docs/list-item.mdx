@@ -1,0 +1,41 @@
+---
+name: List Item
+---
+
+import { Playground } from 'docz'
+import { ListItem, Li } from '../src'
+
+# List Item
+
+The List Item component is used to build styled HTML list items (li). These should be used with the Unordered or Ordered List components.
+
+<Playground>
+  <ul>
+    <ListItem>List item</ListItem>
+    <ListItem color="purple" fontWeight="bold">
+      Purple bold list item
+    </ListItem>
+    <ListItem bg="black" color="white" p={2}>
+      White on black background
+    </ListItem>
+  </ul>
+</Playground>
+
+## Presets
+
+`<Li />` is a preset List Item configurition for a basic HTML li.
+
+<Playground>
+  <ul>
+    <Li>Preset list item</Li>
+  </ul>
+  <ol>
+    <Li>Preset list item</Li>
+  </ol>
+</Playground>
+
+## styled-system props
+
+Text component accepts [space](https://styled-system.com/api#space), [color](https://styled-system.com/api#color),
+[fontSize](https://styled-system.com/api#fontsize), [typography](https://styled-system.com/api#typography), [width](https://styled-system.com/api#width)
+and [layout](https://styled-system.com/api#layout) props from styled-system.
