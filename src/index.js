@@ -1,1 +1,1 @@
-export { Paragraph, P, Lead } from './paragraph'
+export { Text, P, Lead } from './text'

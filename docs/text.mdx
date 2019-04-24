@@ -1,0 +1,40 @@
+---
+name: Text
+---
+
+import { Playground } from 'docz'
+import { Text, P, Lead } from '../src'
+
+# Text
+
+The Text component is used to build styled typography components such as paragraphs and spans. By default, it renders as a span.
+
+<Playground>
+  <Text as="p">Basic text component</Text>
+  <Text as="p" color="white" bg="red">
+    Text component with white font, red background
+  </Text>
+  <Text as="p" fontSize="16pt" fontWeight="bold">
+    Large, bold text
+  </Text>
+</Playground>
+
+## Presets
+
+`<P />` and `<Lead />` are preset Text configurations for basic paragraphs and lead paragraphs.
+
+<Playground>
+  <P>Paragraph preset</P>
+  <Lead>Lead Paragraph preset</Lead>
+</Playground>
+
+## styled-system props
+
+Text component accepts [space](https://styled-system.com/api#space), [color](https://styled-system.com/api#color),
+[fontSize](https://styled-system.com/api#fontsize) and [typography](https://styled-system.com/api#typography) props from styled-system.
+
+## Component props
+
+| Name |  Type  | Default | Description                                                    |
+| ---- | :----: | ------- | :------------------------------------------------------------- |
+| as   | String | `span`  | Sets the HTML tag for the component. For example, p, span etc. |

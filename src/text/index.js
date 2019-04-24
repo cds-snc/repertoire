@@ -25,12 +25,12 @@ export const Text = styled('span', {
 
 Text.propTypes = {
   as: PropTypes.string,
-  ...fontSize.propTypes,
-  ...lineHeight.propTypes,
-  ...space.propTypes,
-  ...color.propTypes,
-  ...fontWeight.propTypes,
-  ...textAlign.propTypes,
+  // ...fontSize.propTypes,
+  // ...lineHeight.propTypes,
+  // ...space.propTypes,
+  // ...color.propTypes,
+  // ...fontWeight.propTypes,
+  // ...textAlign.propTypes,
 }
 
 export { P, Lead } from './presets'
