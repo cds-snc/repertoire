@@ -1,0 +1,54 @@
+---
+name: asAnchor
+---
+
+import { Playground } from 'docz'
+import { asAnchor } from '../src'
+
+# asAnchor
+
+asAnchor is a higher order component that wraps and styles HTML links. For example:
+
+```
+const Link = asAnchor('a')
+
+<BaseLink>I am a link! You can style me</BaseLink>
+
+```
+
+The Link component includes presets built using asAnchor.
+
+## styled-system props
+
+Component accepts [space](https://styled-system.com/api#space), [color](https://styled-system.com/api#color), [width](https://styled-system.com/api#width),
+[borders](https://styled-system.com/api#borders), [layout](https://styled-system.com/api#layout), [fontSize](https://styled-system.com/api#fontsize) and [typography](https://styled-system.com/api#typography) props from styled-system.
+
+The [colorStyle](https://styled-system.com/table) prop can be used to define a set of colors that make up a link. For example:
+
+```
+// theme.js
+
+const theme = {
+  colorStyles: {
+      link: {
+      color: colors.blue,
+      '&:focus': {
+        backgroundColor: colors.focusColor,
+        outline: `3px solid ${colors.focusColor}`,
+      },
+      '&:visited': {
+        color: colors.purple,
+      },
+      '&:hover': {
+        color: colors.lightBlue,
+      },
+    }
+  }
+}
+
+// index.js
+
+const StyledLink = asAnchor('a')
+
+<StyledLink colors="link">I am a stylish link!</StyledLink>
+```
