@@ -14,4 +14,12 @@ export { Breadcrumb } from './breadcrumb'
 
 export { Button } from './button'
 
+export { A, FooterLink } from './link'
+
+export { PhaseBanner } from './phase-banner'
+
+export { TopBanner } from './topbanner'
+
+export { Footer } from './footer'
+
 export { asAnchor } from './utils/asAnchor'

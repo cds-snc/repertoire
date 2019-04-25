@@ -15,6 +15,7 @@ import {
   minHeight,
   minWidth,
   borders,
+  display,
 } from 'styled-system'
 import { cleanProps } from '../cleanProps'
 import PropTypes from 'prop-types'
@@ -45,6 +46,7 @@ export const asAnchor = AnchorType => {
     ${minHeight};
     ${minWidth};
     ${borders};
+    ${display};
   `
 
   StyledAnchor.propTypes = {
@@ -62,6 +64,7 @@ export const asAnchor = AnchorType => {
     ...minHeight.propTypes,
     ...minWidth.propTypes,
     ...borders.propTypes,
+    ...display.propTypes,
   }
 
   return StyledAnchor
