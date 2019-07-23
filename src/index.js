@@ -1,4 +1,6 @@
-export { Text, P, Lead } from './text'
+export { Text } from './text'
+
+export { P, Lead } from './paragraph'
 
 export { Header, H1, H2, H3, H4, H5, H6 } from './header'
 
@@ -17,8 +19,6 @@ export { Button } from './button'
 export { A, FooterLink } from './link'
 
 export { PhaseBanner } from './phase-banner'
-
-export { TopBanner } from './topbanner'
 
 export { Footer } from './footer'
 

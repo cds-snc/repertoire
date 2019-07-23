@@ -1,19 +1,4 @@
-import {
-  fontSize,
-  lineHeight,
-  space,
-  color,
-  fontWeight,
-  textAlign,
-  display,
-  maxWidth,
-  minWidth,
-  width,
-  height,
-  maxHeight,
-  minHeight,
-  size,
-} from 'styled-system'
+import { fontSize, lineHeight, space, color, fontWeight } from 'styled-system'
 import styled from '@emotion/styled'
 import { cleanProps } from '../utils/cleanProps'
 
@@ -26,17 +11,8 @@ export const UnorderedList = styled('ul', {
   ${fontSize};
   ${lineHeight};
   ${space};
-  ${color};
   ${fontWeight};
-  ${textAlign};
-  ${display};
-  ${maxWidth};
-  ${minWidth};
-  ${width};
-  ${height};
-  ${maxHeight};
-  ${minHeight};
-  ${size};
+  ${color};
 `
 UnorderedList.propTypes = {
   ...fontSize.propTypes,
@@ -44,15 +20,6 @@ UnorderedList.propTypes = {
   ...space.propTypes,
   ...color.propTypes,
   ...fontWeight.propTypes,
-  ...textAlign.propTypes,
-  ...display.propTypes,
-  ...maxWidth.propTypes,
-  ...minWidth.propTypes,
-  ...height.propTypes,
-  ...width.propTypes,
-  ...maxHeight.propTypes,
-  ...minHeight.propTypes,
-  ...size.propTypes,
 }
 
 export { Ul } from './presets'

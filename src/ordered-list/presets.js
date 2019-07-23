@@ -1,7 +1,7 @@
+import React from 'react'
 import { OrderedList } from '.'
 import PropTypes from 'prop-types'
-/** @jsx jsx **/
-import { jsx, css } from '@emotion/core'
+import { css } from '@emotion/core'
 
 export const Ol = props => {
   const { listStyleType, ...rest } = props

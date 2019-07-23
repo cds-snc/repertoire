@@ -1,6 +1,6 @@
 import React from 'react'
 import { ThemeProvider } from 'emotion-theming'
-import { render, cleanup } from 'react-testing-library'
+import { render, cleanup } from '@testing-library/react'
 import { mount } from 'enzyme'
 import { Header, H1, H2, H3, H4, H5, H6 } from '../'
 
@@ -78,8 +78,8 @@ describe('<Header />', () => {
     expect(test).toHaveStyleRule('font-weight', 'bold')
   })
 
-  it('Renders as an h1 by default', () => {
-    let wrapper = mount(<Header />).find('h1')
+  it("The 'is' prop sets correct header tag", () => {
+    let wrapper = mount(<Header as="h1" />).find('h1')
     expect(wrapper.is('h1')).toBeTruthy()
   })
 

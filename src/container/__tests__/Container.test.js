@@ -1,7 +1,7 @@
 import React from 'react'
 import { ThemeProvider } from 'emotion-theming'
 import { Container } from '../'
-import { render, cleanup } from 'react-testing-library'
+import { render, cleanup } from '@testing-library/react'
 
 describe('<Container />', () => {
   afterEach(cleanup)
@@ -47,14 +47,7 @@ describe('<Container />', () => {
 
   it('properly handles dimension props', () => {
     const { getByText } = render(
-      <Container
-        width={400}
-        height="2rem"
-        maxWidth="100"
-        minWidth="50"
-        maxHeight="100"
-        minHeight="50"
-      >
+      <Container width={400} height="2rem">
         test
       </Container>,
     )
@@ -62,10 +55,6 @@ describe('<Container />', () => {
     const test = getByText(/test/)
     expect(test).toHaveStyleRule('width', '400px')
     expect(test).toHaveStyleRule('height', '2rem')
-    expect(test).toHaveStyleRule('max-width', '100')
-    expect(test).toHaveStyleRule('min-width', '50')
-    expect(test).toHaveStyleRule('max-height', '100')
-    expect(test).toHaveStyleRule('min-height', '50')
   })
 
   it('properly handles space props', () => {

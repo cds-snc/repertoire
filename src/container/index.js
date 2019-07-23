@@ -12,10 +12,6 @@ import {
   flexDirection,
   width,
   height,
-  maxWidth,
-  maxHeight,
-  minHeight,
-  minWidth,
   color,
   borders,
   borderColor,
@@ -45,11 +41,7 @@ export const Container = styled('div', {
   ${flexBasis}
   ${flexDirection}
   ${width}
-  ${minWidth}
-  ${maxWidth}
   ${height}
-  ${minHeight}
-  ${maxHeight}
   ${color}
   ${display}
   ${space}
@@ -65,37 +57,6 @@ export const Container = styled('div', {
   ${right}
   ${zIndex}
 `
-
-Container.propTypes = {
-  ...alignItems.propTypes,
-  ...alignContent.propTypes,
-  ...justifyContent.propTypes,
-  ...flex.propTypes,
-  ...flexWrap.propTypes,
-  ...flexBasis.propTypes,
-  ...flexDirection.propTypes,
-  ...width.propTypes,
-  ...minWidth.propTypes,
-  ...maxWidth.propTypes,
-  ...maxHeight.propTypes,
-  ...minHeight.propTypes,
-  ...height.propTypes,
-  ...color.propTypes,
-  ...display.propTypes,
-  ...space.propTypes,
-  ...justifySelf.propTypes,
-  ...alignSelf.propTypes,
-  ...borders.propTypes,
-  ...borderColor.propTypes,
-  ...textAlign.propTypes,
-  ...position.propTypes,
-  ...top.propTypes,
-  ...bottom.propTypes,
-  ...left.propTypes,
-  ...right.propTypes,
-  ...zIndex.propTypes,
-}
-
 export const Content = props => (
   <main
     css={css`

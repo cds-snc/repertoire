@@ -1,40 +1,46 @@
 import styled from '@emotion/styled'
 import {
   fontSize,
+  fontWeight,
   lineHeight,
   space,
   color,
-  fontWeight,
+  display,
+  border,
+  borderColor,
+  width,
+  height,
+  position,
+  zIndex,
+  top,
+  right,
+  bottom,
+  left,
   textAlign,
 } from 'styled-system'
 import { cleanProps } from '../utils/cleanProps'
-import PropTypes from 'prop-types'
 
-export const Text = styled('span', {
+export const StyledSpan = styled('span', {
   shouldForwardProp: prop => cleanProps(prop),
 })`
   font-family: ${({ theme }) => theme.fontSans};
   margin: 0;
   ${fontSize};
+  ${fontWeight};
   ${lineHeight};
   ${space};
   ${color};
-  ${fontWeight};
-  ${textAlign};
+  ${display};
+  ${border};
+  ${borderColor};
+  ${width};
+  ${height};
+  ${position};
+  ${zIndex};
+  ${top};
+  ${right};
+  ${bottom};
+  ${left};
+  ${textAlign}
 `
-
-Text.propTypes = {
-  as: PropTypes.string,
-  ...fontSize.propTypes,
-  ...lineHeight.propTypes,
-  ...space.propTypes,
-  ...color.propTypes,
-  ...fontWeight.propTypes,
-  ...textAlign.propTypes,
-}
-
-Text.defaultProps = {
-  as: 'span',
-}
-
-export { P, Lead } from './presets'
+export { Text } from './presets'

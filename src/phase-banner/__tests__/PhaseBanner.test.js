@@ -1,6 +1,7 @@
 import React from 'react'
 import { ThemeProvider } from 'emotion-theming'
-import { render, cleanup } from 'react-testing-library'
+import theme from '../../../__mocks__/theme'
+import { render, cleanup } from '@testing-library/react'
 import { PhaseBanner } from '../'
 
 describe('<PhaseBanner />', () => {
@@ -8,9 +9,11 @@ describe('<PhaseBanner />', () => {
 
   it('properly renders child components', () => {
     const { getAllByText } = render(
-      <PhaseBanner phase="test" phaseColor="blue">
-        <em>foo</em>
-      </PhaseBanner>,
+      <ThemeProvider theme={theme}>
+        <PhaseBanner phase="test" phaseColor="blue">
+          <em>foo</em>
+        </PhaseBanner>
+      </ThemeProvider>,
     )
 
     const test = getAllByText(/foo/)
