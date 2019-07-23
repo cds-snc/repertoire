@@ -2,7 +2,7 @@ import React from 'react'
 import { render, cleanup } from '@testing-library/react'
 import { ThemeProvider } from 'emotion-theming'
 import theme from '../../../__mocks__/theme'
-import { ButtonLink } from '..'
+import { ButtonAsLink } from '..'
 
 describe('<Button />', () => {
   afterEach(cleanup)
@@ -10,9 +10,9 @@ describe('<Button />', () => {
   it('properly renders child components', () => {
     const { getAllByText } = render(
       <ThemeProvider theme={theme}>
-        <ButtonLink>
+        <ButtonAsLink>
           <em>foo</em>
-        </ButtonLink>
+        </ButtonAsLink>
       </ThemeProvider>,
     )
     expect(getAllByText(/foo/)).toHaveLength(1)
@@ -21,7 +21,7 @@ describe('<Button />', () => {
   it('uses styling props correctly', () => {
     const { getByText } = render(
       <ThemeProvider theme={theme}>
-        <ButtonLink
+        <ButtonAsLink
           fontSize="11pt"
           fontWeight="bold"
           lineHeight="6.6"
@@ -29,7 +29,7 @@ describe('<Button />', () => {
           mb="66pt"
         >
           foo
-        </ButtonLink>
+        </ButtonAsLink>
       </ThemeProvider>,
     )
     const test = getByText(/foo/)

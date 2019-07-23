@@ -25,7 +25,7 @@ const BaseButtonLink = styled('button', {
   }
 `
 
-export const ButtonLink = props => (
+export const ButtonAsLink = props => (
   <BaseButtonLink
     fontSize={[1, null, 2]}
     fontWeight="normal"
@@ -35,6 +35,6 @@ export const ButtonLink = props => (
   />
 )
 
-ButtonLink.propTypes = {
+ButtonAsLink.propTypes = {
   children: PropTypes.node,
 }

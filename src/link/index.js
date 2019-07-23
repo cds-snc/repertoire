@@ -24,7 +24,7 @@ Link.propTypes = {
   children: PropTypes.any,
 }
 
-export const ButtonLink = props => (
+export const LinkAsButton = props => (
   <BaseLink
     fontSize={[2, null, 3]}
     fontWeight="normal"
@@ -43,11 +43,11 @@ export const ButtonLink = props => (
   </BaseLink>
 )
 
-ButtonLink.propTypes = {
+LinkAsButton.propTypes = {
   children: PropTypes.any,
 }
 
-export const ButtonAnchor = props => (
+export const AnchorAsButton = props => (
   <BaseAnchor
     fontSize={[2, null, 3]}
     fontWeight="normal"
@@ -66,7 +66,7 @@ export const ButtonAnchor = props => (
   </BaseAnchor>
 )
 
-ButtonAnchor.propTypes = {
+AnchorAsButton.propTypes = {
   children: PropTypes.any,
 }
 
