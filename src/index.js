@@ -8,10 +8,6 @@ export { Checkbox } from './checkbox'
 
 export { Container, Content, CenterContent } from './container'
 
-export { Footer } from './footer'
-
-// gocsig
-
 export { Header, H1, H2, H3, H4, H5, H6 } from './header'
 
 export { Input } from './input'
@@ -41,5 +37,3 @@ export { TextArea } from './text-area'
 export { UnorderedList, Ul } from './unordered-list'
 
 export { asAnchor } from './utils/asAnchor'
-
-// wordmark
